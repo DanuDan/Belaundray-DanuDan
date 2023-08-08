@@ -1,6 +1,6 @@
 import FeatureChart from "../../features/FeatureChart";
 import FeatureTopSelling from "../../features/FeatureTopSelling";
-import AdminLayout from "../../layouts/SuperadminLayout";
+import AdminLayout from "../../layouts/AdminLayout";
 
 export default function DashboardAdmin() {
     return (

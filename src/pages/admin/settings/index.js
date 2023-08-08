@@ -1,4 +1,4 @@
-import AdminLayout from "../../../layouts/SuperadminLayout";
+import AdminLayout from "../../../layouts/AdminLayout";
 
 
 
