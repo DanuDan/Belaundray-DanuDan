@@ -11,7 +11,6 @@ export default function UserLayout({ children, title, icon, description }) {
     const { update } = useSession({required:true})
     useEffect(() => {
         dispatch(getInfoUser()).then((data) => {
-            console.log(data)
             update({
                 name: data.name
             })

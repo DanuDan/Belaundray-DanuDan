@@ -1,7 +1,6 @@
 import LoadingSpinner from "@/components/Loading/Spinner";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
-import { useSelector } from "react-redux";
 
 export default function InputFileImage({
     change,

@@ -25,10 +25,6 @@ export default function FeatureCreateProduct() {
         dispatch(getCategory())
     }, [])
 
-    useEffect(() => {
-        console.log(form)
-    }, [form])
-
     function changeForm(e) {
         setForm({
             ...form,

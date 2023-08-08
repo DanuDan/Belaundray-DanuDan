@@ -1,9 +1,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
-import { signOut, useSession } from "next-auth/react";
+import { signOut} from "next-auth/react";
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../store/slices/userSlice";
 
@@ -12,10 +11,6 @@ export default function FeatureProfileNavbar() {
     const dispatch = useDispatch()
     const [toggleMenu, setToggleMenu] = useState(false)
     const user = useSelector((state) => state.user)
-
-    const { data } = useSession()
-    console.log(data)
-
 
     function logout() {
         dispatch(logoutUser())

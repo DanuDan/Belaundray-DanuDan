@@ -13,10 +13,9 @@ export default function AdminLayout({ children, title, icon, description }) {
     const showHide = useSelector((state) => state.sidebar.show)
     const dispatch = useDispatch()
     const { update } = useSession({required:true})
-    
+
     useEffect(() => {
         dispatch(getInfoUser()).then((data) => {
-            console.log(data)
             update({
                 name: data.name
             })

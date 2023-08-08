@@ -2,7 +2,7 @@ import Link from "next/link";
 import UserLayout from "../../../../layouts/UserLayout";
 import Image from "next/image";
 import InputNumber from "../../../../components/Input/Number";
-import { useState, useEffect } from "react"
+import { useState, useEffect} from 'react';
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductDetail } from "../../../../store/slices/productSlice";
@@ -13,7 +13,6 @@ export default function detailProduct() {
     const detailId = router.query.detailProduct
     const dispatch = useDispatch()
     const productDetail = useSelector((state) => state.product.master.detail.source)
-    const categories = useSelector((state) => state.category.master.source)
 
     const patenNumber = productDetail.price
     const [number, setNumber] = useState(patenNumber)

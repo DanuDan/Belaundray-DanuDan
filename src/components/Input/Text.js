@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useEffect, useImperativeHandle, useRef, useState } from "react";
-import { useSelector } from "react-redux";
 
 export default function InputText({
     placeholder,

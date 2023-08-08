@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 import { Chart, registerables } from "chart.js";
-// import InputSelect from "@/components/Input/Select";
-import Image from "next/image";
 import { Line } from "react-chartjs-2";
-// import { useDispatch, useSelector } from "react-redux";
-// import {  filterQRISMonthPartner, filterQRISYearPartner, getchartPartner, resetFilterQrisPartner} from "@/store/slice/dashboardSlice";
 import ShimmerLoading from "@/components/Loading/Shimmer";
 import LoadingSpinner from "@/components/Loading/Spinner";
 import InputSelect from "../components/Input/Select";
@@ -14,20 +10,6 @@ import { getChart } from "../store/slices/chartSlice";
 Chart.register(...registerables)
 Chart.defaults.borderColor = '#FFFFFF';
 Chart.defaults.scales.linear.beginAtZero = true
-// Chart.defaults.scales.linear.ticks = {
-//     callback: function (value) {
-//         if (value < 2000) {
-//             return value
-//         } else if (value < 1000000) {
-//             return value / 1000 + ' Ribu'
-//         } else if (value < 1000000000) {
-//             return value / 1000000 + ' Juta'
-//         } else {
-//             return value / 1000000000 + ' Milliar'
-//         }
-//     }
-// }
-
 
 function FeatureChart() {
     const dispatch = useDispatch()
@@ -37,12 +19,6 @@ function FeatureChart() {
     useEffect(() => {
         dispatch(getChart())
     }, [])
-
-    // function changeInput({ target }) {
-    //     target.name == 'year' && dispatch(filterQRISYearPartner(target.value))
-    //     target.name == 'month' && dispatch(filterQRISMonthPartner(target.value))
-    //     dispatch(getchartPartner())
-    // }
 
     const [chartData, setChartData] = useState({
         labels: [],
@@ -72,7 +48,6 @@ function FeatureChart() {
                 {
                     label: "",
                     fill: false,
-    
                     type: "bar",
                     data: chart.map((item) => item.total),
                     borderColor: "#B2C5D4",
@@ -144,10 +119,6 @@ function FeatureChart() {
             },
         }
     }
-
-    // function resetFilter() {
-    //     dispatch(resetFilterQrisPartner())
-    // }
 
 
     return (

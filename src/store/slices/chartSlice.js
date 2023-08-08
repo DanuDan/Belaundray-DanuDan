@@ -19,13 +19,10 @@ const chartSlice = createSlice({
 })
 
 export const getChart = () => async (dispatch) => {
-    // const params = Object.keys(query).map(key => key + '=' + query[key]).join('&');
     await axios.get(`platform/product/report`).then(({ data }) => {
-        // dispatch(setLoading(false))
-        console.log(data)
         dispatch(setChart(data))
     }).catch(({ response }) => {
-        // dispatch(setLoading(false))
+
         toast.error(response?.message)
     })
 }

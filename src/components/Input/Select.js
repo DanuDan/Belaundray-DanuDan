@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 
 export default function InputSelect({
     placeholder,
@@ -12,7 +11,6 @@ export default function InputSelect({
     loading,
     label,
     defaultValue,
-    // calendar,
     required,
     fieldName,
     value

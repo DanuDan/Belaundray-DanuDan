@@ -9,13 +9,11 @@ export const authOptions = {
     providers: [
         CredentialsProvider({
             async authorize(credentials) {
-                console.log(credentials)
                 try {
                     const { response } = await loginUser({
                         email: credentials.email,
                         password: credentials.password
                     })
-                    // console.log(response)
                     return {
                         response,
                         name: "",
@@ -23,7 +21,6 @@ export const authOptions = {
                         token: response
                     }
                 } catch (error) {
-                    // console.log(error)
                     throw new Error(error?.data?.message)
                 }
             }

@@ -45,7 +45,6 @@ const categorySlice = createSlice({
 export const getCategory = () => async (dispatch, state) => {
     dispatch(setLoading(true))
     await axios.get(`platform/product/categories`).then(({ data }) => {
-        console.log(data.response)
         dispatch(setLoading(false))
         dispatch(setSource(data.response))
     }).catch(({ response }) => {

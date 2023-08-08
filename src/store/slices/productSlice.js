@@ -45,7 +45,6 @@ export const getProductDetail = (payload) => async (dispatch) => {
 export const getProduct = () => async (dispatch, state) => {
     dispatch(setLoading(true))
     await axios.get(`platform/product`).then(({ data }) => {
-        console.log(data.response)
         dispatch(setLoading(false))
         dispatch(setSource(data.response))
     }).catch(({ response }) => {
@@ -57,7 +56,6 @@ export const getProduct = () => async (dispatch, state) => {
 export const createProduct = (payload) => async (dispatch) => {
     return new Promise(async (resolve, _) => {
         await axios.post(`platform/product`, payload).then(({ data }) => {
-            // dispatch(getSalesList())
             toast.success(data?.message)
             resolve()
         }).catch(({ response }) => {
