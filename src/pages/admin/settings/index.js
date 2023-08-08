@@ -1,10 +1,11 @@
-import SuperAdminLayout from "../../../layouts/SuperadminLayout";
+import AdminLayout from "../../../layouts/SuperadminLayout";
+
 
 
 export default function Settings() {
     return (
-        <SuperAdminLayout title="Settings" >
+        <AdminLayout title="Settings" >
 
-        </SuperAdminLayout>
+        </AdminLayout>
     )
 }

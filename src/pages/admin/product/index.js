@@ -1,13 +1,13 @@
 import FeatureCreateProduct from "../../../features/FeatureCreateProduct";
-import SuperAdminLayout from "../../../layouts/SuperadminLayout";
+import AdminLayout from "../../../layouts/SuperadminLayout";
 
 
 export default function Product() {
     return (
-        <SuperAdminLayout title="Product" >
+        <AdminLayout title="Product" >
             <FeatureCreateProduct />
 
 
-        </SuperAdminLayout>
+        </AdminLayout>
     )
 }

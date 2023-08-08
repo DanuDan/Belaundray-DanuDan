@@ -1,10 +1,10 @@
 import FeatureChart from "../../features/FeatureChart";
 import FeatureTopSelling from "../../features/FeatureTopSelling";
-import SuperAdminLayout from "../../layouts/SuperadminLayout";
+import AdminLayout from "../../layouts/SuperadminLayout";
 
 export default function DashboardAdmin() {
     return (
-        <SuperAdminLayout title="Home" >
+        <AdminLayout title="Home" >
             <div className="space-y-5 p-5 md:p-6">
                 <FeatureChart />
             </div>
@@ -12,6 +12,6 @@ export default function DashboardAdmin() {
                 <FeatureTopSelling />
 
             </div>
-        </SuperAdminLayout>
+        </AdminLayout>
     )
 }

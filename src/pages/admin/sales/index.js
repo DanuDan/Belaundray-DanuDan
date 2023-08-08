@@ -1,10 +1,10 @@
-import SuperAdminLayout from "../../../layouts/SuperadminLayout";
+import AdminLayout from "../../../layouts/SuperadminLayout";
 
 
 export default function Sales() {
     return (
-        <SuperAdminLayout title="Sales" >
+        <AdminLayout title="Sales" >
 
-        </SuperAdminLayout>
+        </AdminLayout>
     )
 }
